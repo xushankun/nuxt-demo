@@ -35,7 +35,11 @@ export default {
   * 该配置项用于配置那些需要在 根vue.js应用 实例化之前需要运行的 Javascript 插件。【类似spa   main.js 开头的import】
   */
   plugins: [
-    '@/plugins/element-ui'
+    // { src: '~/plugins/vue-notifications', ssr: false },    // 只在客户端使用的插件
+    '@/plugins/element-ui',
+    '@/plugins/ctx-inject.js',    // 注入context
+    '@/plugins/vue-inject.js',    // 注入vue 实例
+    '@/plugins/combined-inject.js'  // context 和 vue 实例同时注入
   ],
   /*
   ** Nuxt.js dev-modules
