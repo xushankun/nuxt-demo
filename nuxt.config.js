@@ -64,5 +64,12 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  generate: {
+    routes: [
+      '/nav',
+      '/nav/',
+      '/nav/two'
+    ]
   }
 }
