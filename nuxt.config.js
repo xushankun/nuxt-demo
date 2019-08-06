@@ -67,9 +67,9 @@ export default {
   },
   generate: {
     routes: [
-      '/nav',
       '/nav/',
-      '/nav/two'
+      '/nav/two',
+      '/nav/xxx'
     ]
   }
 }
