@@ -3,8 +3,7 @@
 // ~ 或 @	     src目录
 // ~~ 或 @@    根目录
 export default {
-  // mode: 'universal',
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
