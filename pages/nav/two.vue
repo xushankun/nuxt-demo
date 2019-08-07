@@ -2,6 +2,7 @@
     <div>
       <h2>nav/two的内容</h2>
       <div>花开花落</div>
+      <div>{{ baseUrl }}</div>
 <!--      <div>host:{{ host }}</div>-->
     </div>
 </template>
