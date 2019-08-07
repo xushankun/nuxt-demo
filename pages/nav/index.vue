@@ -18,6 +18,7 @@
           console.log('asyncData--------------------------我只在server端')
           // process.server  为true 时表示当前服务端
           console.log(process.server)
+
           let _host = process.server ? context.req.headers.host : ''
           context.app.printHost(_host)
           context.app.$ctxVueInjected('asyncData:$ctxVueInjected')
