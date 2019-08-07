@@ -8,7 +8,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || 'nuxt',
+    title: '大吉大利丨今晚吃鸡',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -16,13 +16,17 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'shortcut icon', href: 'https://shankun.top/img/favicon.ico' }
+    ],
+    // 引入外部资源
+    // script: [
+    //   { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+    // ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: 'red' },
+  loading: { color: '#41b883' },
   /*
   ** Global CSS
   * 该配置项用于定义应用的全局（所有页面均需引用的）样式文件、模块或第三方库。

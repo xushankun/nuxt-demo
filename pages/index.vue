@@ -16,6 +16,15 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  // 除了nuxt.config.js的head引入外部资源，这里也可以引入外部资源
+  head: {
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+    ],
+    link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
+    ]
+  },
   components: {
     Logo
   }

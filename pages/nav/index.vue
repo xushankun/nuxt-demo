@@ -3,7 +3,7 @@
       <div>host:{{ host }}</div>
       <h2>新闻列表</h2>
       <ul>
-        <li v-for="(item,index) in list" :key="index">
+        <li v-for="(item,index) in list" :key="index" v-if="index <= 2">
           <a :href="item.href" target="_blank">{{item.title}}</a>
         </li>
       </ul>
@@ -14,13 +14,18 @@
   import axios from 'axios'
     export default {
         name: "one.vue",
-        async asyncData (context) {
+        async asyncData (ctx) {
           console.log('asyncData--------------------------我只在server端')
-          // process.server  为true 时表示当前服务端
-          // console.log(process.server)
-          let _host = process.server ? context.req.headers.host : ''
-          context.app.printHost(_host)
-          context.app.$ctxVueInjected('asyncData:$ctxVueInjected')
+          console.log(process.server)
+          // ctx.app // 根实例
+          // ctx.route // 路由实例
+          // ctx.params  //路由参数
+          // ctx.query  // 路由问号后面的参数
+          // ctx.error   // 错误处理方法
+          // process.server  为true 时表示当前服务端【首次渲染为true】
+          let _host = process.server ? ctx.req.headers.host : ''
+          ctx.app.printHost(_host)
+          ctx.app.$ctxVueInjected('asyncData:$ctxVueInjected')
           let res = await axios.get(`https://xu.shankun.top/otherApi/news`)
           return {
             list: res.data.data,
@@ -35,6 +40,10 @@
       mounted() {
         console.log('mounted------------------------------我只在client端')
         this.$ctxVueInjected('mounted:$ctxVueInjected')
+        this.$nextTick(() => {
+          this.$nuxt.$loading.start()
+          setTimeout(() => this.$nuxt.$loading.finish(), 1000)
+        })
       }
     }
 </script>
