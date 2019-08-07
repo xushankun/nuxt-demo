@@ -10,6 +10,9 @@
     export default {
         name: "two.vue",
         async asyncData (content) {
+          return {
+            baseUrl: process.env.npm_package_baseUrl || 'localhost:xxx'
+          }
           // console.log(content.req)
           // if (process.server) {
           //   return { host: content.req.headers.host || '没有。。' }
