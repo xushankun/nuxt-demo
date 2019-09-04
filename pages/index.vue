@@ -1,14 +1,13 @@
 <template>
   <div class="container">
     <div>
-      <el-button type="primary">NAV BLOCK</el-button>
       <logo />
       <h1 class="title">
         nuxt-demo
       </h1>
-      <h2 class="subtitle">
-        My excellent Nuxt.js project
-      </h2>
+      <nuxt-link to="/nav/one">
+        <el-button type="primary">NAV BLOCK</el-button>
+      </nuxt-link>
     </div>
   </div>
 </template>
