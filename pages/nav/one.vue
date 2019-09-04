@@ -3,7 +3,7 @@
       <div>host:{{ host }}</div>
       <h2>新闻列表</h2>
       <ul>
-        <li v-for="(item,index) in list" :key="index" v-if="index <= 2">
+        <li v-for="(item,index) in list" :key="one" v-if="one <= 2">
           <a :href="item.href" target="_blank">{{item.title}}</a>
         </li>
       </ul>

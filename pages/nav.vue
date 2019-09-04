@@ -1,7 +1,7 @@
 <template>
     <div>
       <h1>嵌套路由</h1>
-      <nuxt-link to="/nav/">
+      <nuxt-link to="/nav/one">
         <el-button type="primary">nav one</el-button>
       </nuxt-link>
       <nuxt-link to="/nav/two">

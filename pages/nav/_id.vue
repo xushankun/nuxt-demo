@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>nav/three的内容</h2>
-    <div>花开花落</div>
+    <div>云卷云舒</div>
     <div>参数id:{{id}}</div>
   </div>
 </template>
