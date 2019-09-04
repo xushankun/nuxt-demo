@@ -55,7 +55,20 @@ export default {
   * 该配置项允许您将Nuxt模块添加到项目中。
   */
   modules: [
+    '@nuxtjs/axios'
   ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': {
+      target: 'https://xu.shankun.top/otherApi', // 代理地址
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': '', //将 /api 替换掉
+      },
+    },
+  },
   /*
   ** Build configuration
   * *Nuxt.js 允许你在自动生成的 vendor.bundle.js 文件中添加一些模块，以减少应用 bundle 的体积。

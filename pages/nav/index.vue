@@ -26,7 +26,8 @@
           let _host = process.server ? ctx.req.headers.host : ''
           ctx.app.printHost(_host)
           ctx.app.$ctxVueInjected('asyncData:$ctxVueInjected')
-          let res = await axios.get(`https://xu.shankun.top/otherApi/news`)
+          let res = await axios.get(`http://localhost:3000/api/news`)
+          console.log(res.data.data)
           return {
             list: res.data.data,
             host: _host
@@ -35,7 +36,6 @@
       created() {
           console.log('created------------------------------我在server端和client端')
         this.$myInjectedFunction('test')
-
       },
       mounted() {
         console.log('mounted------------------------------我只在client端')
