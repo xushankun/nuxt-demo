@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <el-button type="primary">NAV BLOCK</el-button>
       <logo />
       <h1 class="title">
         nuxt-demo
